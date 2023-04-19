@@ -6,7 +6,7 @@ def ping_test(host):
     not_reached = []
     file = open("ping.txt", "a")
     for ip in host:
-        # response = os.system('ping -c 30 %s' % ip)
+        response = os.system('ping -c 30 %s' % ip)
         print(ip)
         try:
             response = subprocess.check_output(
@@ -34,9 +34,9 @@ hosts = [
          "92.38.156.13", "92.38.156.93", "92.38.156.142", "92.38.156.189",  # 3 claster
          "92.223.4.191",    # 4 claster
          "92.223.41.195",   # 5 claster
-         "92.223.57.35", "92.223.57.86" # 0 claster WotBlitz
-         "92.223.39.65", "92.223.39.58" # 1 claster
-         "92.223.45.13", "92.223.45.12" # 2 claster
+         "92.223.57.35", "92.223.57.86", # 0 claster WotBlitz
+         "92.223.39.65", "92.223.39.58", # 1 claster
+         "92.223.45.13", "92.223.45.12", # 2 claster
 
          ]
 ping_test(hosts)
