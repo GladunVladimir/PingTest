@@ -6,7 +6,7 @@ def ping_test(host):
     not_reached = []
     file = open("ping.txt", "a")
     for ip in host:
-        response = os.system('ping -c 30 %s' % ip)
+        # response = os.system('ping -c 30 %s' % ip)
         print(ip)
         try:
             response = subprocess.check_output(
